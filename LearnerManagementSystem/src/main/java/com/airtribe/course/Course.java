@@ -11,15 +11,6 @@ public abstract class Course {
   protected List<Cohort> cohorts;
   protected CourseType courseType;
 
-  public Course(String courseId, String courseName, String courseDescription, List<Cohort> cohorts,
-      CourseType courseType) {
-    this.courseId = courseId;
-    this.courseName = courseName;
-    this.courseDescription = courseDescription;
-    this.cohorts = cohorts;
-    this.courseType = courseType;
-  }
-
   public Course(String courseId, String courseName, String courseDescription, CourseType courseType) {
     this.courseId = courseId;
     this.courseName = courseName;

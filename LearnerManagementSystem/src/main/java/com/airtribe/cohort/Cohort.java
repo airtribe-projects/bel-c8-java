@@ -12,6 +12,7 @@ public class Cohort {
   private String cohortName;
   private String cohortDescription;
   private List<Learner> learners;
+  private List<Instructor> instructors;
 
   public String getCohortName() {
     return cohortName;
@@ -29,16 +30,6 @@ public class Cohort {
     this.cohortDescription = cohortDescription;
   }
 
-  private List<Instructor> instructors;
-
-  public Cohort(String cohortId, String startDate, String endDate, List<Learner> learners,
-      List<Instructor> instructors) {
-    this.cohortId = cohortId;
-    this.startDate = startDate;
-    this.endDate = endDate;
-    this.learners = learners;
-    this.instructors = instructors;
-  }
 
   public Cohort(String cohortId, String startDate, String endDate, String cohortName, String cohortDescription,
       List<Learner> learners, List<Instructor> instructors) {
@@ -108,24 +99,31 @@ public class Cohort {
   }
 
   public void displayCohortDetails() {
+    System.out.println("Cohort Details:");
+    System.out.println("---------------");
     System.out.println("Cohort ID: " + cohortId);
     System.out.println("Start Date: " + startDate);
     System.out.println("End Date: " + endDate);
     System.out.println("Cohort Name: " + cohortName);
     System.out.println("Cohort Description: " + cohortDescription);
-    System.out.println("Learners: ");
+    System.out.println("---------------");
+    System.out.println("Learners:");
+    System.out.println("---------------");
     for (Learner learner : learners) {
       System.out.println("Learner ID: " + learner.getLearnerId());
       System.out.println("Learner Name: " + learner.getLearnerName());
       System.out.println("Learner XP: " + learner.getXp());
+      System.out.println("---------------");
     }
-    System.out.println("Instructors: ");
+    System.out.println("Instructors:");
+    System.out.println("---------------");
     for (Instructor instructor : instructors) {
       System.out.println("Instructor ID: " + instructor.getInstructorId());
       System.out.println("Instructor Name: " + instructor.getInstructorName());
       System.out.println("Instructor Email: " + instructor.getInstructorEmail());
       System.out.println("Instructor Phone: " + instructor.getInstructorPhone());
       System.out.println("Instructor Experience: " + instructor.getInstructorExperience());
+      System.out.println("---------------");
     }
   }
 }

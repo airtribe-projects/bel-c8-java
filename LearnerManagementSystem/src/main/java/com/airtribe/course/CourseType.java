@@ -4,4 +4,4 @@ public enum CourseType {
   JAVA,
 
   NODE
-};
+}

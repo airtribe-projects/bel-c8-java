@@ -3,12 +3,14 @@ package com.airtribe;
 import com.airtribe.cohort.Cohort;
 import com.airtribe.course.Course;
 import com.airtribe.course.CourseType;
+import com.airtribe.course.OfflineCourse;
 import com.airtribe.course.OnlineCourse;
 import com.airtribe.instructor.Instructor;
 import com.airtribe.learner.JavaLearner;
 import com.airtribe.learner.Learner;
 import com.airtribe.learner.NodeJsLearner;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class Main {
@@ -25,21 +27,29 @@ public class Main {
     nodeLearner2.displayLearnerDetails();
     javaLearner.displayLearnerDetails();
 
-    Cohort nodeCohort1 = new Cohort("1234", "01/01/2020", "01/01/2021",
-        List.of(nodeLearner1, nodeLearner2), List.of(instructor));
+    Cohort nodeCohort1 = new Cohort("1234", "01/01/2020", "01/01/2021", "NodeJs Cohort",
+        "NodeJs Cohort Description", new ArrayList<>(Arrays.asList(nodeLearner1, nodeLearner2)),
+        new ArrayList<>(Arrays.asList(instructor)));
 
-    Cohort javaCohort = new Cohort("1235", "01/01/2020", "01/01/2021",
-        List.of(javaLearner), List.of(instructor));
+    Cohort javaCohort = new Cohort("1235", "01/01/2020", "01/01/2021", "Java Cohort",
+        "java cohort description", new ArrayList<>(Arrays.asList(javaLearner)),
+        new ArrayList<>(Arrays.asList(instructor)));
 
     javaCohort.displayCohortDetails();
     nodeCohort1.displayCohortDetails();
 
     Course nodeJsCourse = new OnlineCourse("1234", "NodeJs",
-        "NodeJs Course", CourseType.NODE);
+        "NodeJs Course", CourseType.NODE, "https://zoom.us/nodejs");
+
+    Course javaCourse = new OfflineCourse("1235", "Java",
+        "Java Course", CourseType.JAVA, "Mumbai");
 
     nodeJsCourse.addCohort(nodeCohort1);
 
+    javaCourse.addCohort(javaCohort);
+
     nodeJsCourse.displayCourseDetails();
+    javaCourse.displayCourseDetails();
 
   }
 }
