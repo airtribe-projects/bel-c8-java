@@ -4,8 +4,14 @@ Classes:
   3. Library
 
 Class Diagram: 
+
+
+
   ![LibraryManagementSystem drawio](https://github.com/user-attachments/assets/573ca840-d0e3-4797-9ba3-cc601e0bdecd)
 
+
+  
+  
   The Library Class is responsible for storing the details of the available collection of Books and all the patrons. The Patron will interact with the Library to lend or return a book. 
   The Library will also be responsible to maintain the lending history of the Patron to keep a track of all the books that were borrowed and if they were returned or not. 
   This Borrowing history of the patron will help the library class to build a recommendation system to recommend a book to the patron based on their borrowing history.
