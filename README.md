@@ -1,5 +1,3 @@
-![LibraryManagementSystem drawio](https://github.com/user-attachments/assets/6ab8b370-35e1-4841-b8f9-03296328eb0a)
-
 Classes:
   1. Patron 
   2. Book
