@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="87ac811e-a1fe-4829-8a78-6b85e2f93b6f" name="Changes" comment="Book Recommentation System" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="LibraryManagementSystem" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2jmHuRtI1CGu6DIKlvVum4IrKNj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LibraryManagementSystem&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adity/Documents/Airtribe/bel-c8-java/LibraryManagementSystemV2/src/main/java/com/Lib&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adity\Documents\Airtribe\bel-c8-java\LibraryManagementSystemV2\src\main\java\com\Lib" />
+      <recent name="C:\Users\adity\Documents\Airtribe\bel-c8-java\LibraryManagementSystemV2\src\main\java\com\Lib\library" />
+      <recent name="C:\Users\adity\Documents\Airtribe\bel-c8-java\LibraryManagementSystemV2\src\main\java\com\Lib\patron" />
+      <recent name="C:\Users\adity\Documents\Airtribe\bel-c8-java\LibraryManagementSystemV2\src\main\java\com\Lib\book" />
+      <recent name="C:\Users\adity\Documents\Airtribe\bel-c8-java\LibraryManagementSystem\src\main\java\com\Library\book" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.java.com.Library.patron" />
+      <recent name="main.java.com.Library.book" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Library.Main" />
+      <module name="bel-c8-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Library.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.java.com.Lib.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.com.Lib.Main" />
+      <module name="bel-c8-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.com.Lib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.java.com.Library.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.com.Library.Main" />
+      <module name="bel-c8-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.com.Library.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main.java.com.Lib.Main" />
+        <item itemvalue="Application.main.java.com.Library.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87ac811e-a1fe-4829-8a78-6b85e2f93b6f" name="Changes" comment="" />
+      <created>1721985554585</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721985554585</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Book Recommentation System">
+      <option name="closed" value="true" />
+      <created>1722085727079</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722085727079</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Book Recommentation System" />
+    <option name="LAST_COMMIT_MESSAGE" value="Book Recommentation System" />
+  </component>
+</project>
