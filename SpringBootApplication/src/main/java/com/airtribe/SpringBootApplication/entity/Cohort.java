@@ -1,10 +1,14 @@
 package com.airtribe.SpringBootApplication.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import java.util.List;
 
 
@@ -19,7 +23,26 @@ public class Cohort {
   private long cohortId;
 
   @ManyToMany
+  @JoinTable(
+      name = "cohort_learner",
+      joinColumns = @JoinColumn(name = "cohort_id"),
+      inverseJoinColumns = @JoinColumn(name = "learner_id")
+  )
   private List<Learner> _learnerList;
+
+
+  @ManyToOne
+  @JoinColumn(name = "course_id")
+  private Course course;
+
+
+  @ManyToMany
+  @JoinTable(
+      name = "cohort_instructor",
+      joinColumns = @JoinColumn(name = "cohort_id"),
+      inverseJoinColumns = @JoinColumn(name = "instructor_id")
+  )
+  private List<Instructor> _instructorList;
 
   public Cohort(String cohortName, List<Learner> learnerList) {
     this.cohortName = cohortName;
