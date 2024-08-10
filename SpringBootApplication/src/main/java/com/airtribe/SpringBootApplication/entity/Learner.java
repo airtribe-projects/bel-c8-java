@@ -10,8 +10,18 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
+@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Learner {
   @NotBlank(message = "Name is mandatory")
@@ -29,48 +39,13 @@ public class Learner {
   private long learnerId;
 
   @ManyToMany(mappedBy = "_learnerList")
-  @JsonBackReference
   private List<Cohort> _cohortList;
 
-  public Learner(String learnerName, int age, String email, long learnerId) {
+  public Learner(String learnerName, int age, String email, Long learnerId) {
     this.learnerName = learnerName;
     this.age = age;
     this.email = email;
     this.learnerId = learnerId;
   }
 
-  public Learner() {
-  }
-
-  public String getLearnerName() {
-    return learnerName;
-  }
-
-  public void setLearnerName(String learnerName) {
-    this.learnerName = learnerName;
-  }
-
-  public int getAge() {
-    return age;
-  }
-
-  public void setAge(int age) {
-    this.age = age;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public long getLearnerId() {
-    return learnerId;
-  }
-
-  public void setLearnerId(long learnerId) {
-    this.learnerId = learnerId;
-  }
 }

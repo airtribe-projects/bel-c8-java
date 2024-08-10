@@ -49,6 +49,15 @@ public class Cohort {
     this._learnerList = learnerList;
   }
 
+  public Cohort(String cohortName, long cohortId, List<Learner> learnerList, Course course,
+      List<Instructor> instructorList) {
+    this.cohortName = cohortName;
+    this.cohortId = cohortId;
+    _learnerList = learnerList;
+    this.course = course;
+    _instructorList = instructorList;
+  }
+
   public Cohort() {
 
   }

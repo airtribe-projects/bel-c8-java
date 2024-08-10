@@ -3,21 +3,25 @@ package com.airtribe.SpringBootApplication.service;
 import com.airtribe.SpringBootApplication.entity.Learner;
 import com.airtribe.SpringBootApplication.error.LearnerNotFoundException;
 import com.airtribe.SpringBootApplication.repository.LearnerRepository;
+import java.util.ArrayList;
 import java.util.Optional;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.TestPropertySource;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 
 @SpringBootTest
+@TestPropertySource("classpath:application-test.properties")
 class LearnerServiceTest {
 
   public LearnerServiceTest() {
@@ -57,6 +61,7 @@ class LearnerServiceTest {
   //Anatomy of unit test
 
   @Test
+  @DisplayName("Test fetch learner by id for exception")
   void fetchLearnerDoesNotExist() {
     assertThrows(LearnerNotFoundException.class, () -> _learnerService.getLearnerById(2L));
   }
