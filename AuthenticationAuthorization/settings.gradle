@@ -1,3 +1,5 @@
 rootProject.name = 'AuthenticationAuthorization'
 
 include 'SpringSecurity'
+include 'authorization-server'
+include 'resource-server'

@@ -2,10 +2,9 @@ package org.airtribe.SpringSecurity.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -29,14 +28,11 @@ public class WebSecurityConfig {
                 .requestMatchers("/register", "/verifyRegistration").permitAll() // Allow unauthenticated access to /register
                 .anyRequest().authenticated() // Require authentication for other requests
         )
-        .formLogin(formLogin ->
-            formLogin
-                .loginPage("/login") // Specify login page if needed
-                .permitAll()
-        )
-        .logout(logout ->
-            logout.permitAll()
-        );
+        .oauth2Login(oauth2Login -> {
+          oauth2Login.loginPage("/oauth2/authorization/api-client-oidc");
+          oauth2Login.defaultSuccessUrl("/api/hello", true);
+        }) // Enable OAuth2 login
+        .oauth2Client(Customizer.withDefaults());
 
     return http.build();
   }
