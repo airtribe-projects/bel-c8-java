@@ -1,15 +1,20 @@
 package org.airtribe.AuthenticationAuthorization.service;
 
+import java.util.List;
 import org.airtribe.AuthenticationAuthorization.entity.User;
 import org.airtribe.AuthenticationAuthorization.model.UserModel;
 import org.airtribe.AuthenticationAuthorization.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
 
   @Autowired
   private UserRepository _userRepository;
@@ -26,5 +31,18 @@ public class UserService {
     databaseUser.setEnabled(false);
     return _userRepository.save(databaseUser);
 
+  }
+
+  @Override
+  public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    User user = _userRepository.findByEmail(username);
+    if (user == null) {
+      throw new UsernameNotFoundException("User not found");
+    }
+    return new org.springframework.security.core.userdetails.User(
+        user.getName(),
+        user.getPassword(),
+        List.of(new SimpleGrantedAuthority(user.getRole()))
+    );
   }
 }
